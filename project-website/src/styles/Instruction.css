@@ -1,0 +1,139 @@
+.instruction-page {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	font-family: "Arial", sans-serif;
+}
+
+.instruction-header {
+	text-align: center;
+	background-color: #f4f6f7;
+	padding: 30px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+}
+
+.program-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+}
+
+.program-card {
+	background-color: #ffffff;
+	border: 1px solid #e0e0e0;
+	border-radius: 10px;
+	padding: 25px;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.program-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.program-courses {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 15px;
+}
+
+.course-tag {
+	background-color: #f0f0f0;
+	padding: 5px 10px;
+	border-radius: 15px;
+	font-size: 0.8rem;
+}
+
+.instructor-section {
+	background-color: #f9f9f9;
+	padding: 30px;
+	border-radius: 10px;
+}
+
+.instructor-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.back-button {
+	background-color: #333;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.instructor-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 20px;
+}
+
+.instructor-card {
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-card img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 15px;
+}
+
+.instructors-and-curricular-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+}
+
+.instructors-section,
+.curricular-section {
+	background-color: #f9f9f9;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.instructor-card {
+	background-color: white;
+	border: 1px solid #e0e0e0;
+	border-radius: 10px;
+	padding: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.instructor-card img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 15px;
+}
+
+.instructor-courses {
+	margin-top: 15px;
+	text-align: left;
+}
+
+.instructor-courses ul {
+	list-style-type: disc;
+	padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+	.instructors-and-curricular-container {
+		grid-template-columns: 1fr;
+	}
+}
