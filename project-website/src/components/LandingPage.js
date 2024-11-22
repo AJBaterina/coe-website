@@ -1,9 +1,45 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import "../styles/LandingPage.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import SELB from "../assets/SELB.ico";
+import faculty from "../assets/faculty.png";
+import passers from "../assets/passers.png";
+import passingrate from "../assets/passingrate.png";
+import innov from "../assets/innov.png";
+import passersname from "../assets/passersname.png";
+import instructors from "../assets/instructors.png";
+import PRMSU from "../assets/PRMSU.jpg";
+
+import fishcrasher from "../assets/fishcrasher.png";
+import coeSelb from "../assets/coe-selb.png";
 
 const LandingPage = () => {
+	const settings = {
+		dots: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		pauseOnHover: false,
+		arrows: false
+	};
+
+	const carouselImages = [
+		faculty,
+		passers,
+		passingrate,
+		innov,
+		passersname,
+		instructors,
+		PRMSU
+	];
+
 	return (
 		<div className="landing-page">
 			<div className="hero-section">
@@ -62,6 +98,59 @@ const LandingPage = () => {
 				<div className="image-placeholder"></div>
 			</section>
 
+			<section className="carousel-container">
+				<Slider {...settings}>
+					{carouselImages.map((image, index) => (
+						<div key={index} className="carousel-slide">
+							<img
+								src={image}
+								alt={`Engineering slide ${index + 1}`}
+								className="carousel-image"
+							/>
+						</div>
+					))}
+				</Slider>
+			</section>
+
+			<hr />
+
+			<div className="highlight-container">
+				<div className="highlight-card">
+					<img src={fishcrasher} alt="Fish Crasher" />
+					<h3>
+						BSME Department awards and demonstrates the Fish Crushing
+						Machine to Laoag Kaunlaran Association
+					</h3>
+					<p className="highlight-fishcrasher">
+						The BSME Department awards and demonstrates the Fish Crushing
+						Machine to Laoag Kaunlaran Association -Cooperative through
+						the Regional Innovation Inclusive Cooperation Program between
+						DTI, DOST, PRMSU and MSMED Council on the 14th of October
+						2022. This is a realization of the objectives of TEAM-UP
+						EXTENSION PROGRAM parallel with the THRIVE agenda of the
+						college with the goal, "A single step from COE, a hundred
+						mouths fed in the community through upscaling and upgrading
+						livelihood activities of small and medium enterprises in the
+						Province of Zambales".
+					</p>
+				</div>
+			</div>
+
+			<div className="highlight-container">
+				<div className="highlight-card">
+					<img src={coeSelb} alt="Fish Crasher" />
+					<h3>COE conducts Orientation and Gender Sensitivity Training</h3>
+					<p className="highlight-fishcrasher">
+						The PRMSU College of Engineering conducted the 2nd Batch of
+						Orientation and Gender and Development (GAD) / Gender
+						Sensitivity Training (GST) Seminar for Freshmen at the Science
+						and Engineering Laboratory Building (SELB) Annex on October
+						20, 2022 with speakers Engr. Rue Lei Balicaco and Engr. Cindy
+						Dullas.
+					</p>
+				</div>
+			</div>
+
 			<section className="services-section">
 				<h2>Our Program Offering</h2>
 				<div className="services-grid">
@@ -112,21 +201,6 @@ const LandingPage = () => {
 			<footer className="landing-footer">
 				<div className="footer-content">
 					<div className="footer-logo">Engineering Solutions</div>
-					<div className="footer-links">
-						<a href="#">Home</a>
-						<a href="#">Services</a>
-						<a href="#">Projects</a>
-						<a href="#">Contact</a>
-					</div>
-					<div className="footer-social">
-						{/* Social media icons */}
-						<a href="#">LinkedIn</a>
-						<a href="#">Twitter</a>
-						<a href="#">GitHub</a>
-					</div>
-				</div>
-				<div className="footer-bottom">
-					© 2023 Engineering Solutions. All Rights Reserved.
 				</div>
 			</footer>
 		</div>

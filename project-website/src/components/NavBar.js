@@ -18,9 +18,7 @@ const Navbar = () => {
 		{ name: "Home", link: "/" },
 		{ name: "Program Offering", link: "/instruction" },
 		{ name: "Research and Extension", link: "/research" },
-		{ name: "History", link: "/history" },
-		{ name: "About", link: "/about" },
-		{ name: "Contact", link: "/contact" }
+		{ name: "History", link: "/history" }
 	];
 
 	const MobileNavbar = () => (
@@ -50,7 +48,9 @@ const Navbar = () => {
 
 	const DesktopNavbar = () => (
 		<nav className="desktop-navbar">
-			<div className="logo"></div>
+			<div className="logo">
+				<a href="/"></a>
+			</div>
 			<div className="nav-links">
 				{navItems.map((item, index) => (
 					<div key={index} className="nav-item">

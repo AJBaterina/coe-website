@@ -1,0 +1,68 @@
+.history-container {
+	display: flexbox;
+	justify-self: center;
+	max-width: 85vw;
+	background: white;
+	padding: 100px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+
+.img-info {
+	justify-self: center;
+}
+
+.history-container p {
+	justify-self: center;
+	font-size: 16px;
+	color: #555;
+	line-height: 1.6;
+	text-align: justify;
+	padding: 0 5% 0 5%;
+}
+
+.selb-history {
+	width: 70vw;
+	height: 40vh;
+}
+
+@media (max-width: 768px) {
+	.history-container {
+		padding: 15px;
+	}
+
+	h1 {
+		font-size: 24px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 480px) {
+	.App-header {
+		padding: 15px;
+	}
+
+	.history-container {
+		margin-top: 10px;
+		padding: 10px;
+	}
+
+	h1 {
+		font-size: 22px;
+	}
+
+	h2 {
+		font-size: 18px;
+	}
+
+	p {
+		font-size: 12px;
+	}
+}

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "../styles/Instruction.css";
 
+import jasper from "../assets/Logo.ico";
+import EngrDeboma from "../assets/M.Eng. Deboma.jpg";
+
 const InstructionPage = () => {
 	const [selectedProgram, setSelectedProgram] = useState(null);
 
@@ -8,13 +11,21 @@ const InstructionPage = () => {
 		{
 			id: "mechanical",
 			title: "Mechanical Engineering",
+			course: "Bachelor of Science in Mechanical Engineering",
 			description:
 				"Comprehensive program focusing on design, manufacturing, and thermal systems.",
+			curriculars: [
+				{
+					id: 2020,
+					year: 2020,
+					link: "https://drive.google.com/file/d/1_ohlfVvqBD2BVIU3iI1xAJXe8tN67pxn/view"
+				}
+			],
 			head: [
 				{
 					name: "Dr. John Smith",
 					specialty: "Robotics and Automation",
-					image: "../assets/Logo.ico",
+					image: jasper,
 					bio: "Expert in robotics with 15 years of industry and academic experience."
 				}
 			],
@@ -42,8 +53,17 @@ const InstructionPage = () => {
 		{
 			id: "electrical",
 			title: "Electrical Engineering",
+			course: "Bachelor of Science in Electrical Engineering",
 			description:
 				"Cutting-edge program covering electronics, power systems, and telecommunications.",
+			head: [
+				{
+					name: "Dr. John Smith",
+					specialty: "Robotics and Automation",
+					image: jasper,
+					bio: "Expert in robotics with 15 years of industry and academic experience."
+				}
+			],
 			instructors: [
 				{
 					name: "Dr. Michael Chen",
@@ -68,8 +88,17 @@ const InstructionPage = () => {
 		{
 			id: "civil",
 			title: "Civil Engineering",
+			course: "Bachelor of Science in Civil Engineering",
 			description:
 				"Innovative program covering software development, AI, and cloud computing.",
+			head: [
+				{
+					name: "Dr. John Smith",
+					specialty: "Robotics and Automation",
+					image: jasper,
+					bio: "Expert in robotics with 15 years of industry and academic experience."
+				}
+			],
 			instructors: [
 				{
 					name: "Dr. Alex Wong",
@@ -94,14 +123,17 @@ const InstructionPage = () => {
 		{
 			id: "computer",
 			title: "Computer Engineering",
+			course: "Bachelor of Science in Computer Engineering",
 			description:
 				"Comprehensive program focusing on design, manufacturing, and thermal systems.",
-			head: {
-				name: "Dr. John Smith",
-				specialty: "Robotics and Automation",
-				image: "https://via.placeholder.com/150",
-				bio: "Expert in robotics with 15 years of industry and academic experience."
-			},
+			head: [
+				{
+					name: "Dr. John Smith",
+					specialty: "Robotics and Automation",
+					image: jasper,
+					bio: "Expert in robotics with 15 years of industry and academic experience."
+				}
+			],
 			instructors: [
 				{
 					name: "Dr. John Smith",
@@ -126,14 +158,41 @@ const InstructionPage = () => {
 		{
 			id: "mining",
 			title: "Mining Engineering",
+			course: "Bachelor of Science in Mining Engineering",
 			description:
 				"Comprehensive program focusing on design, manufacturing, and thermal systems.",
+			head: [
+				{
+					name: "Dr. John Smith",
+					specialty: "Robotics and Automation",
+					image: jasper,
+					bio: "Expert in robotics with 15 years of industry and academic experience."
+				}
+			],
 			instructors: [
 				{
 					name: "Dr. John Smith",
 					specialty: "Robotics and Automation",
 					image: "https://via.placeholder.com/150",
 					bio: "Expert in robotics with 15 years of industry and academic experience."
+				},
+				{
+					name: "Prof. Emily Rodriguez",
+					specialty: "Thermal Engineering",
+					image: "https://via.placeholder.com/150",
+					bio: "Renowned researcher in sustainable energy systems and heat transfer."
+				},
+				{
+					name: "Prof. Emily Rodriguez",
+					specialty: "Thermal Engineering",
+					image: "https://via.placeholder.com/150",
+					bio: "Renowned researcher in sustainable energy systems and heat transfer."
+				},
+				{
+					name: "Prof. Emily Rodriguez",
+					specialty: "Thermal Engineering",
+					image: "https://via.placeholder.com/150",
+					bio: "Renowned researcher in sustainable energy systems and heat transfer."
 				},
 				{
 					name: "Prof. Emily Rodriguez",
@@ -154,6 +213,33 @@ const InstructionPage = () => {
 	const renderProgramOfferings = () => {
 		return (
 			<div className="program-offerings">
+				<div className="instruction-header">
+					<h1>Program Offerings</h1>
+					<p>Explore our comprehensive engineering education offerings</p>
+				</div>
+				<div className="instructor">
+					<div key="{index}" className="instructor-card">
+						<img src={EngrDeboma} alt="{name}" />
+						<h3>GILBERT D. DEBOMA, REE, M.Eng.</h3>
+						<h4>College Dean</h4>
+						<p className="dean-p">
+							Engr Gilbert D. Deboma is a faculty of the College of
+							Engineering for 24 years with an Academic Rank of Associate
+							Professor V. He is a graduate of Bachelor of Science in
+							Electrical Engineering at Technological Institute of the
+							Philippines – Quezon City. He finished his Master of
+							Science in Electronics Engineering at Andong National
+							University – South Korea. He is currently taking up PhD in
+							Agricultural Engineering at Central Luzon State University.
+							Engr Deboma is an active member of the Institute of
+							Integrated Electrical Engineers, Inc., the accredited
+							professional organization of electrical practitioners of
+							the Philippines. He is the current dean of the College of
+							Engineering and concurrent Program Chairperson of the
+							Electrical Engineering Department.
+						</p>
+					</div>
+				</div>
 				<h2>Our Engineering Programs</h2>
 				<div className="program-grid">
 					{programOfferings.map((program) => (
@@ -182,6 +268,24 @@ const InstructionPage = () => {
 
 		return (
 			<div className="instructor-section">
+				<div className="instruction-header">
+					<h1>{selectedProgram.course}</h1>
+					<p>{selectedProgram.description}</p>
+				</div>
+				<div className="curricular-offerings">
+					<h1>Curricular Offerings</h1>
+					{selectedProgram.curriculars.map((curricular, id) => (
+						<>
+							<p>Select to open</p>
+							<button index={id} className="offering-btn">
+								<a href={curricular.link} target="_blank">
+									{curricular.year}
+								</a>
+							</button>
+						</>
+					))}
+				</div>
+
 				<div className="instructor-header">
 					<h2>{selectedProgram.title} Instructors</h2>
 					<button
@@ -215,16 +319,16 @@ const InstructionPage = () => {
 	};
 
 	return (
-		<div className="instruction-page">
-			<div className="instruction-header">
-				<h1>Program Offerings</h1>
-				<p>Explore our comprehensive engineering education offerings</p>
+		<>
+			<div className="instruction-page">
+				{selectedProgram
+					? renderInstructorSection()
+					: renderProgramOfferings()}
 			</div>
-
-			{selectedProgram
-				? renderInstructorSection()
-				: renderProgramOfferings()}
-		</div>
+			<footer className="landing-footer">
+				<div className="footer-content"></div>
+			</footer>
+		</>
 	);
 };
 
