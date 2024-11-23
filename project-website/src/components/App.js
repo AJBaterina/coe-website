@@ -14,8 +14,8 @@ function App() {
 				<Navbar />
 				<Routes>
 					<Route path="/" element={<LandingPage />} />
-					<Route path="/instruction" element={<InstructionPage />} />
-					<Route path="/research" element={<Research />} />
+					<Route path="/programs" element={<InstructionPage />} />
+					<Route path="/research-and-extentions" element={<Research />} />
 					<Route path="/history" element={<History />} />
 				</Routes>
 			</div>

@@ -24,6 +24,12 @@
 .selb-history {
 	width: 70vw;
 	height: 40vh;
+	background-size: contain;
+}
+
+.coe-faculty {
+	width: 80vw;
+	background-size: contain;
 }
 
 @media (max-width: 768px) {
