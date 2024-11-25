@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/coe-website/static/css/main.44ce14bc.css",
-    "main.js": "/coe-website/static/js/main.5881f61f.js",
+    "main.js": "/coe-website/static/js/main.ab8a5ba8.js",
     "static/media/Aramay.png": "/coe-website/static/media/Aramay.1537fcbdde54d2f0e921.png",
     "static/media/Dalusong.png": "/coe-website/static/media/Dalusong.c5500531e979ee013fb4.png",
     "static/media/mech_placeholder.png": "/coe-website/static/media/mech_placeholder.309b61323030224a5e8a.png",
@@ -77,10 +77,10 @@
     "static/media/slick.woff": "/coe-website/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/coe-website/index.html",
     "main.44ce14bc.css.map": "/coe-website/static/css/main.44ce14bc.css.map",
-    "main.5881f61f.js.map": "/coe-website/static/js/main.5881f61f.js.map"
+    "main.ab8a5ba8.js.map": "/coe-website/static/js/main.ab8a5ba8.js.map"
   },
   "entrypoints": [
     "static/css/main.44ce14bc.css",
-    "static/js/main.5881f61f.js"
+    "static/js/main.ab8a5ba8.js"
   ]
 }
