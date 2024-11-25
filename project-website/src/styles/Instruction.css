@@ -1,0 +1,263 @@
+.instruction-page {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	font-family: "Arial", sans-serif;
+}
+
+.instruction-header {
+	text-align: center;
+	background-color: #f4f6f7;
+	padding: 80px 0 20px 0;
+	border-radius: 10px;
+}
+
+.program-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	background-color: #f4f6f7;
+	padding: 10px;
+	gap: 20px;
+}
+
+.program-card {
+	background-color: var(--primary-color);
+	border: 1px solid #e0e0e0;
+	border-radius: 10px;
+	padding: 25px;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.program-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.program-courses {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 15px;
+}
+
+.course-tag {
+	background-color: #f0f0f0;
+	padding: 5px 10px;
+	border-radius: 15px;
+	font-size: 0.8rem;
+}
+
+.instructor-section {
+	display: block;
+	background-color: #f9f9f9;
+	padding: 30px;
+	border-radius: 10px;
+}
+
+.instructor-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.back-button {
+	justify-self: baseline;
+	background-color: #333;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.instructor-grid-allied {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	background-color: #f9f9f9;
+	width: 77vw;
+	padding: 10px;
+	gap: 20px;
+}
+.instructor-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	background-color: #f9f9f9;
+	width: 73vw;
+	padding: 10px;
+	gap: 20px;
+}
+
+.instructor-card {
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-card-head {
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-card-head img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 15px;
+	border: solid #f76d00 5px;
+}
+
+.instructor-card-head p {
+	text-align: justify;
+}
+
+.instructor-card img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 15px;
+}
+
+.instructors-and-curricular-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+}
+
+.instructors-section,
+.curricular-section {
+	background-color: #f9f9f9;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.instructor-card {
+	background-color: white;
+	border: 1px solid #e0e0e0;
+	border-radius: 10px;
+	padding: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.instructor-card p {
+	text-align: justify;
+}
+.instructor-card img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 15px;
+	border: solid #f76d00 5px;
+}
+
+.instructor-courses {
+	margin-top: 15px;
+	text-align: left;
+}
+
+.instructor-courses ul {
+	list-style-type: disc;
+	padding-left: 20px;
+}
+
+.curricular-offerings {
+	margin: 30px 0;
+}
+.offering-btn a,
+.offering-btn {
+	text-decoration: none;
+	background-color: var(--primary-color);
+	color: #e0e0e0;
+	border-radius: 15px;
+	width: 200px;
+	height: 30px;
+	margin: 5px 2%;
+}
+
+.dean-p {
+	text-align: justify;
+	padding: 3%;
+}
+
+@media (max-width: 768px) {
+	.instructors-and-curricular-container {
+		grid-template-columns: 1fr;
+	}
+
+	.instruction-header {
+		text-align: center;
+		background-color: #f4f6f7;
+		padding: 5px;
+		height: 10vh;
+		border-radius: 10px;
+	}
+
+	.instructor-header {
+		justify-content: center;
+	}
+
+	.offer {
+		height: 150px;
+		padding: 0 20px;
+	}
+
+	.program-grid {
+		gap: 10px;
+	}
+
+	.instructor-grid-allied {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		width: 85vw;
+		gap: 10px;
+	}
+
+	.instructor-grid-allied img {
+		height: 100px;
+		width: auto;
+	}
+
+	.instructor-grid-allied h6 {
+		margin: 0;
+	}
+
+	.instructor-card {
+		margin: 0;
+	}
+
+	.instructor-card img {
+		height: 100px;
+		width: auto;
+	}
+
+	.instructor-card h6 {
+		margin: 0;
+	}
+
+	.instructor-grid {
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+		width: 72vw;
+		gap: 10px;
+	}
+
+	.offering-btn {
+		width: 200px;
+	}
+
+	.offering-btn a {
+		size: 0.2rem;
+	}
+
+	.back-button {
+		display: none;
+	}
+}
