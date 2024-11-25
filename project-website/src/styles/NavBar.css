@@ -6,8 +6,8 @@
 
 .mobile-navbar {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	height: 20px;
 	padding: 1rem;
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
@@ -15,13 +15,24 @@
 }
 
 .logo {
-	width: 3rem;
-	height: 3rem;
-	margin-left: 50px;
+	display: flex;
+	width: 2.5rem;
+	height: 2.5rem;
+	margin: 0 20px;
 	font-size: 1.5rem;
 	font-weight: bold;
 	background-image: url("../assets/Logo.ico");
 	background-size: cover;
+}
+
+.logo a {
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+h3 a {
+	text-decoration: none;
+	color: var(--secondary-color);
 }
 
 .hamburger {
@@ -79,8 +90,7 @@
 	position: fixed;
 	display: flex;
 	width: 100vw;
-	padding-right: 100px;
-	justify-content: space-between;
+	height: 50px;
 	align-items: center;
 	padding: 0.5rem;
 	background-color: var(--primary-color);
@@ -90,8 +100,8 @@
 
 .nav-links {
 	display: flex;
-	margin-right: 50px;
 	gap: 1rem;
+	margin-left: 35vw;
 }
 
 .nav-item a {
@@ -104,13 +114,27 @@
 	background-color: var(--hover-color);
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 480px) {
 	.desktop-navbar {
 		display: none;
 	}
+
+	.logo {
+		margin: 0;
+		margin-right: 10px;
+	}
+
+	.hamburger {
+		margin-left: 120px;
+	}
+
+	h6 a {
+		text-decoration: none;
+		color: var(--secondary-color);
+	}
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1080px) {
 	.mobile-navbar {
 		display: none;
 	}

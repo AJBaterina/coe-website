@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import "../styles/research.css";
 
 import placeholder from "../assets/placeholder.jpg";
+import mech from "../assets/mech_placeholder.png";
+import civil from "../assets/civil_placeholder.png";
+import elec from "../assets/elec_placeholder.png";
+import comp from "../assets/comp_placeholder.png";
+import mine from "../assets/mine_placeholder.png";
 
 import DDDS from "../assets/DDDS.png";
 import framework from "../assets/COE-R-and-E-Framework-v2.png";
@@ -15,13 +20,13 @@ const Research = () => {
 			{
 				title: "BSME Research 1",
 				description: "Content to be updated soon...",
-				image: placeholder,
+				image: mech,
 				pdfLink: ""
 			},
 			{
 				title: "BSME Research 2",
 				description: "Content to be updated soon...",
-				image: placeholder,
+				image: mech,
 				pdfLink: ""
 			}
 		],
@@ -29,7 +34,7 @@ const Research = () => {
 			{
 				title: "BSCE Research 1",
 				description: "Content to be updated soon...",
-				image: placeholder,
+				image: civil,
 				pdfLink: ""
 			}
 		],
@@ -37,7 +42,7 @@ const Research = () => {
 			{
 				title: "BSEE Research 1",
 				description: "Content to be updated soon...",
-				image: placeholder,
+				image: elec,
 				pdfLink: ""
 			}
 		],
@@ -79,7 +84,7 @@ const Research = () => {
 			{
 				title: "BS Mining Research 1",
 				description: "Content to be updated soon...",
-				image: placeholder,
+				image: mine,
 				pdfLink: ""
 			}
 		]
@@ -89,27 +94,27 @@ const Research = () => {
 	const engineeringPrograms = [
 		{
 			name: "Mechanical Engineering",
-			image: placeholder,
+			image: mech,
 			key: "mechanical"
 		},
 		{
 			name: "Civil Engineering",
-			image: placeholder,
+			image: civil,
 			key: "civil"
 		},
 		{
 			name: "Electrical Engineering",
-			image: placeholder,
+			image: elec,
 			key: "electrical"
 		},
 		{
 			name: "Computer Engineering",
-			image: placeholder,
+			image: comp,
 			key: "computer"
 		},
 		{
 			name: "Mining Engineering",
-			image: placeholder,
+			image: mine,
 			key: "mining"
 		}
 	];
@@ -138,21 +143,20 @@ const Research = () => {
 					// Program Selection View
 					<div className="program-selection">
 						<h1>Research & Extensions</h1>
-						<div className="program-grid">
+						<div className="research-grid">
 							{engineeringPrograms.map((program) => (
 								<div
 									key={program.key}
-									className="program-card"
+									className="research-card"
 									onClick={() => handleProgramSelect(program)}>
 									<img src={program.image} alt={program.name} />
 									<div className="program-overlay">
-										<h3>{program.name}</h3>
+										<h5>{program.name}</h5>
 									</div>
 								</div>
 							))}
 						</div>
-						<br></br>
-						<br></br>
+						<h2>Extension</h2>
 						<img src={framework} alt="Extension framewor" />
 						<h3>
 							The College of Engineering Research and Extension Framework

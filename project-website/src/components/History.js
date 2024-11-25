@@ -14,6 +14,7 @@ const History = () => {
 				<p className="img-info">
 					The Science and Engineering Laboratory Building (SELB).
 				</p>
+				<br></br>
 				<section>
 					<h2>BACHELOR OF SCIENCE IN CIVIL ENGINEERING</h2>
 					<p>
@@ -36,6 +37,7 @@ const History = () => {
 						AACCUP accreditation in 2016 and level II in 2019.
 					</p>
 				</section>
+				<br></br>
 				<section>
 					<h2>BACHELOR OF SCIENCE IN COMPUTER ENGINEERING</h2>
 					<p>
@@ -62,6 +64,7 @@ const History = () => {
 						transferred under the College of Engineering (COE).
 					</p>
 				</section>
+				<br></br>
 				<section>
 					<h2>BACHELOR OF SCIENCE IN ELECTRICAL ENGINEERING</h2>
 					<p>
@@ -76,8 +79,7 @@ const History = () => {
 					</p>
 				</section>
 				<br></br>
-				<br></br>
-				<br></br>
+
 				<img src={faculty} className="coe-faculty" />
 				<p className="img-info">The COE faculty and students.</p>
 			</div>

@@ -15,7 +15,6 @@
 	object-fit: contain;
 }
 
-.program-grid,
 .research-grid {
 	display: flex;
 	flex-wrap: wrap;
@@ -26,7 +25,7 @@
 .research-card h1 {
 	color: #333;
 }
-.program-card,
+
 .research-card {
 	width: 250px;
 	height: 300px;
@@ -39,12 +38,10 @@
 	background-color: var(--primary-color);
 }
 
-.program-card:hover,
 .research-card:hover {
 	transform: scale(1.05);
 }
 
-.program-card img,
 .research-card img {
 	width: 100%;
 	height: 60%;
@@ -97,4 +94,55 @@
 	padding: 10px;
 	cursor: pointer;
 	background-color: var(--primary-color);
+	border-radius: 25px;
+	border-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+	.research-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		align-items: center;
+		justify-content: center;
+		gap: 15px;
+	}
+
+	.research-card {
+		width: auto;
+	}
+
+	.program-selection {
+		margin: 0;
+	}
+	.program-selection h2 {
+		margin-top: 50px;
+	}
+
+	.program-selection img {
+		height: 25vh;
+		margin: 0;
+	}
+
+	.back-button-research {
+		display: none;
+	}
+
+	.research-details {
+		margin: 0;
+	}
+
+	.research-modal-content {
+		width: 70vw;
+		height: auto;
+		background-color: var(--primary-color);
+	}
+
+	.research-modal-content img {
+		width: 70vw;
+	}
+
+	.research-modal-content button {
+		background-color: var(--secondary-color);
+		border-color: var(--secondary-color);
+	}
 }

@@ -460,16 +460,13 @@ const InstructionPage = () => {
 					{programOfferings.map((program) => (
 						<div
 							key={program.id}
-							className="program-card"
+							className="program-card offer"
 							onClick={() => setSelectedProgram(program)}>
 							<h3>{program.title}</h3>
 							<p>{program.description}</p>
 						</div>
 					))}
 				</div>
-				<br></br>
-				<br></br>
-				<br></br>
 				<div className="instructor-header">
 					<h2>Allied and General Education Instructors</h2>
 				</div>
@@ -478,7 +475,7 @@ const InstructionPage = () => {
 						instructors.instructors.map((instructors) => (
 							<div key={index} className="instructor-card">
 								<img src={instructors.image} alt={instructors.name} />
-								<h3>{instructors.name}</h3>
+								<h6>{instructors.name}</h6>
 							</div>
 						))
 					)}
@@ -520,7 +517,7 @@ const InstructionPage = () => {
 				</div>
 				<div className="instructor">
 					{selectedProgram.head.map((head, index) => (
-						<div key={index} className="instructor-card">
+						<div key={index} className="instructor-card-head">
 							<img src={head.image} alt={head.name} />
 							<h3>{head.name}</h3>
 							<p>{head.bio}</p>
@@ -531,7 +528,7 @@ const InstructionPage = () => {
 					{selectedProgram.instructors.map((instructor, index) => (
 						<div key={index} className="instructor-card">
 							<img src={instructor.image} alt={instructor.name} />
-							<h3>{instructor.name}</h3>
+							<h6>{instructor.name}</h6>
 							<h4>{instructor.specialty}</h4>
 							<p>{instructor.bio}</p>
 						</div>

@@ -60,6 +60,10 @@
 		padding: 10px;
 	}
 
+	.history-container img {
+		height: 20vh;
+	}
+
 	h1 {
 		font-size: 22px;
 	}

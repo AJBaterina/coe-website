@@ -198,9 +198,13 @@ const LandingPage = () => {
 				</div>
 			</section>
 
+			<section>
+				<h2>Contact U</h2>
+			</section>
+
 			<footer className="landing-footer">
 				<div className="footer-content">
-					<div className="footer-logo">Engineering Solutions</div>
+					<div className="footer-logo"></div>
 				</div>
 			</footer>
 		</div>

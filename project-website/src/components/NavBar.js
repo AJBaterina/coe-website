@@ -24,6 +24,11 @@ const Navbar = () => {
 	const MobileNavbar = () => (
 		<nav className="mobile-navbar">
 			<div className="logo"></div>
+			<h6>
+				<a href="/" target="_self">
+					PRMSU College of Engineering
+				</a>
+			</h6>
 			<div
 				className={`hamburger ${isHamburgerOpen ? "open" : ""}`}
 				onClick={() => setIsHamburgerOpen(!isHamburgerOpen)}>
@@ -49,8 +54,13 @@ const Navbar = () => {
 	const DesktopNavbar = () => (
 		<nav className="desktop-navbar">
 			<div className="logo">
-				<a href="/"></a>
+				<a href="/" target="_self"></a>
 			</div>
+			<h3>
+				<a href="/" target="_self">
+					PRMSU College of Engineering
+				</a>
+			</h3>
 			<div className="nav-links">
 				{navItems.map((item, index) => (
 					<div key={index} className="nav-item">
