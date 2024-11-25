@@ -15,10 +15,13 @@ const Navbar = () => {
 	}, []);
 
 	const navItems = [
-		{ name: "Home", link: "/" },
-		{ name: "Program Offering", link: "/programs" },
-		{ name: "Research and Extension", link: "/research-and-extentions" },
-		{ name: "History", link: "/history" }
+		{ name: "Home", link: "coe-website/" },
+		{ name: "Program Offering", link: "coe-website/programs" },
+		{
+			name: "Research and Extension",
+			link: "coe-website/research-and-extentions"
+		},
+		{ name: "History", link: "coe-website/history" }
 	];
 
 	const MobileNavbar = () => (

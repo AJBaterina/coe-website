@@ -14,9 +14,15 @@ function App() {
 				<Navbar />
 				<Routes>
 					<Route path="/" element={<LandingPage />} />
-					<Route path="/programs" element={<InstructionPage />} />
-					<Route path="/research-and-extentions" element={<Research />} />
-					<Route path="/history" element={<History />} />
+					<Route
+						path="coe-website/programs"
+						element={<InstructionPage />}
+					/>
+					<Route
+						path="coe-website/research-and-extentions"
+						element={<Research />}
+					/>
+					<Route path="coe-website/history" element={<History />} />
 				</Routes>
 			</div>
 		</Router>
